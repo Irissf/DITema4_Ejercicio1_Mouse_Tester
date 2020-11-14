@@ -63,15 +63,15 @@ namespace DITema4_Ejercicio1_Mouse_Tester
 
             if (e.Button == MouseButtons.Left)
             {
-                this.button1.BackColor = Color.Beige;
+                this.button1.BackColor = Color.Crimson;
             }
             else if(e.Button == MouseButtons.Right)
             {
                 this.button2.BackColor = Color.Coral;
             }else
             {
-                this.button1.BackColor = Color.Aqua;
-                this.button2.BackColor = Color.Aqua;
+                this.button1.BackColor = Color.DarkGreen;
+                this.button2.BackColor = Color.DarkGreen;
             }
         }
 
