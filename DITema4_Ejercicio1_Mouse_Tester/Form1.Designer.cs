@@ -42,7 +42,9 @@ namespace DITema4_Ejercicio1_Mouse_Tester
             this.button1.TabIndex = 0;
             this.button1.Text = "Izquierda";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HagoClick);
             this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.coordenadasBotones);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.QuitoClick);
             // 
             // button2
             // 
@@ -53,7 +55,9 @@ namespace DITema4_Ejercicio1_Mouse_Tester
             this.button2.TabIndex = 1;
             this.button2.Text = "Derecha";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HagoClick);
             this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.coordenadasBotones);
+            this.button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.QuitoClick);
             // 
             // Form1
             // 
@@ -68,9 +72,11 @@ namespace DITema4_Ejercicio1_Mouse_Tester
             this.Text = "Mouse Tester";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Segurito);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Prueba);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cklickraton);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PruebaPress);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HagoClick);
             this.MouseLeave += new System.EventHandler(this.AbandonarForm);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.coordenadas);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.QuitoClick);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.previewTecla);
             this.ResumeLayout(false);
 
